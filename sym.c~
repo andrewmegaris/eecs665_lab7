@@ -36,7 +36,7 @@ void dump(int blev, FILE *f)
   
   fprintf(f, "Dumping identifier table\n");
   for(q = id_table; q < &id_table[ITABSIZE]; q++){
-    for(ip = *q; ip ; ip = ip->i_link){
+    for(ip = *i; ip ; ip = ip->i_link){
       if(ip -> i_blevel >= blev){
         fprintf(f, "%s\t%d\t\n", ip->i_name, ip->i_blevel);
       }    
